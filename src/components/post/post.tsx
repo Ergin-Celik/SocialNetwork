@@ -28,6 +28,7 @@ export default function Post(props: IPostProps){
 
           let content = (
                <div id={"post-" + post.id} className="post">
+                    <UserTicket userId={post.userId}></UserTicket>
                     <div className="post-author">
                     </div>
                     <div className="post-title">

@@ -1,0 +1,29 @@
+//This function is used to apply styles specific to some screens.
+//---> $size can be one of the values inside the map-get function.
+//---> $styles contains the list of styles to apply.
+
+@mixin applyResponsiveStyles($size, $styles) {
+
+     $min-width: 0px;
+     $max-width: 0px;
+
+     $min-width: map-get((
+          smartphone: 0px,
+          tablet: 769px,
+          laptop: 1025px,
+          desktop: 1681px
+     ), $size);
+
+     $max-width: map-get((
+          smartphone: 768px,
+          tablet: 1024px,
+          laptop: 1680px,
+          desktop: 1920px
+     ), $size);
+
+     @media screen and (min-width: $min-width) and (max-width: $max-width){
+          @each $property, $value in $styles{
+               #{$property}: $value;
+          }
+     }
+}
