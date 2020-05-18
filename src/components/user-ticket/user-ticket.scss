@@ -8,7 +8,7 @@
 
 .user-image{
      border-radius: 90px;
-     border: 3px solid lightgray;
+     border: 2px solid #b2c2df;
      overflow: hidden;
      width: 50px;
      @include applyResponsiveStyles(laptop, (width: 75px));
@@ -21,6 +21,8 @@
 
 .user-username{
      padding-left: 10px;
+     color: #6395ec;
+     font-weight: bold;
 }
 
 .post-date{

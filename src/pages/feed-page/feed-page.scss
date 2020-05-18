@@ -1,6 +1,9 @@
+@import '../../content/styles/screen-sizes.scss';
+
 #feed-page{
-     height: 600px;
+     height: 96vh;
      overflow: scroll;
-     border: 3px solid red;
-     margin-top: 50px;
+     @include applyResponsiveStyles(smartphone, (height: 95vh));
+     @include applyResponsiveStyles(tablet, (height: 94vh));
+     //border: 3px solid red;
 }

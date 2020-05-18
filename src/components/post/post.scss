@@ -1,8 +1,9 @@
 .post{
      padding: 10px 10px 10px 10px;
      margin: 10px 10px 10px 10px;
-     background-color: rgb(244, 245, 250);
+     background-color: white;
      border-radius: 15px;
+     font-size: 0.9rem;
 }
 
 .post-title{
@@ -21,7 +22,6 @@
      margin: 10px 0px 5px 0px;
      border-radius: 15px;
      background-color: rgb(37, 103, 218);
-     font-size: 0.9rem;
      font-weight: bold;
      color: white;
      &:hover {

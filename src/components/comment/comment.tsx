@@ -1,6 +1,7 @@
 import React from 'react';
 import CommentModel from '../../models/CommentModel';
 import '../comment/comment.scss';
+import LoadingSpinner from '../loading-spinner/loading-spinner';
 
 export interface ICommentProps{
      comment: CommentModel;
@@ -24,7 +25,7 @@ function Comment(props: ICommentProps){
           );
      }
      else{
-          return <p>Loading...</p>;
+          return <LoadingSpinner></LoadingSpinner>;
      }
 }
 

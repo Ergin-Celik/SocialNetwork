@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, RouteComponentProps } from 'react-router-dom';
+import LoadingSpinner from '../../components/loading-spinner/loading-spinner';
 import Post from '../../components/post/post';
 import Comment from '../../components/comment/comment';
 import PostModel from '../../models/PostModel';
@@ -32,7 +33,7 @@ function PostPage(props: IPostPageProps){
                setPost(post);
           });
           
-          return <p>Loading</p>;
+          return <LoadingSpinner></LoadingSpinner>;
      }
      else {
           return(

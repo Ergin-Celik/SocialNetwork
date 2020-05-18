@@ -12,7 +12,8 @@ import PostPage from './pages/post-page/post-page';
 
 function App() {
   let content = (
-   <Router>
+    <Router>
+    <div style={{textAlign: "center", padding: 5}}>Welcome to Social Network</div>
      <Switch>
 
        {/**FEED PAGE*/}
