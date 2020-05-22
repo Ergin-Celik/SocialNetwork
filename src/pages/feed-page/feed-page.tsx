@@ -4,6 +4,7 @@ import postService from '../../services/post-service';
 import PostModel from '../../models/PostModel';
 import Post from '../../components/post/post';
 import './feed-page.scss';
+import {AppContextConsumer} from '../../AppContext';
 
 //Props Interface.
 export interface IFeedPageProps { }
@@ -98,13 +99,17 @@ export default function FeedPage(props: IFeedPageProps) {
      }
      else {
           return (
-               <div id="feed-page" ref={feedPageRef} onScroll={loadPosts}>
-                    {
-                         posts.map(function (value, index) {
-                              return <Post key={value.id} post={value} isComsBtnDisabled={false}></Post>;
-                         })
+               <AppContextConsumer>
+                    { context => 
+                         <div id="feed-page" ref={feedPageRef} onScroll={loadPosts}>
+                              {
+                                   posts.map(function (value, index) {
+                                        return <Post key={value.id} post={value} isComsBtnDisabled={false}></Post>;
+                                   })
+                              }
+                         </div>
                     }
-               </div>
+               </AppContextConsumer>
           );
      }
      /*----------------*/
