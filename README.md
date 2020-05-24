@@ -10,6 +10,10 @@ Here are the concepts that have been used :
 - Props and states
 - React's Context API
 - Hooks (useState, useEffect,...)
-- Axios - HTTP calls to an API (Test API used : https://jsonplaceholder.typicode.com)
+- Axios - HTTP calls to an API
 - Infinite feed with pagination
 - SCSS
+
+This app is a fake facebook-like website that implements an infinite news feed and allows the user to open the posts and read the comments.
+
+This is 'fake', because some test data comes from a free-to-use API (https://jsonplaceholder.typicode.com).
